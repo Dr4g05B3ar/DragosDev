@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DL Coding</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Rest of your HTML content -->
+    <script src="script.js"></script>
+</body>
+    <header>
+        <nav>
+            <div class="logo">Dragos Leskiv</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>My Development Experience</h1>
+            <p></p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <!-- Project cards will go here -->
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="profile-picture.jpg" alt="Profile Picture">
+            <p>Brief introduction about yourself...</p>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skill-bar">
+                <span class="skill-name">HTML/CSS</span>
+                <div class="progress-bar" style="--percentage: 20;"></div>
+                <span class="skill-value">20%</span>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-name">JavaScript</span>
+                <div class="progress-bar" style="--percentage: 70;"></div>
+                <span class="skill-value">10%</span>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-name">Python</span>
+                <div class="progress-bar" style="--percentage: 90;"></div>
+                <span class="skill-value">80%</span>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me (Doesn't Currently Work)</h2>
+            <form action="/send-email.php" method="post">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
