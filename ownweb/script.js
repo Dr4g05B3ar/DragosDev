@@ -49,7 +49,38 @@ animateCard(); // Start the animation
 
 // Skill bar progress
 const skillBars = document.querySelectorAll('.progress-bar');
-skillBars.forEach(bar => {
-    const percentage = Math.random() * 100; // Random percentage between 0 and 100
+skillBars.forEach((bar, index) => {
+    const skillName = document.querySelector(`.skill-bar:nth-child(${index + 1}) .skill-name`);
+    
+    // Set random percentages
+    const percentage = Math.floor(Math.random() * 100);
     bar.style.width = `${percentage}%`;
+    bar.style.setProperty('--percentage', `${percentage}%`);
+    
+    // Update skill name based on percentage
+    skillName.textContent = `${skillName.textContent} (${percentage}%)`;
 });
+
+// Simple progress bar test
+const progressBar = document.createElement('div');
+progressBar.className = 'progress-bar';
+progressBar.style.width = '0%';
+progressBar.style.backgroundColor = '#4CAF50'; // Green
+
+const progressBarContainer = document.getElementById('progress-container');
+if (!progressBarContainer) {
+    progressBarContainer = document.body;
+}
+
+progressBarContainer.appendChild(progressBar);
+
+function increaseProgressBar() {
+    let currentWidth = parseInt(progressBar.style.width.replace('%', ''));
+    currentWidth += 5;
+    if (currentWidth <= 100) {
+        progressBar.style.width = `${currentWidth}%`;
+        setTimeout(increaseProgressBar, 500); // Increase every 500ms
+    }
+}
+
+increaseProgressBar();
